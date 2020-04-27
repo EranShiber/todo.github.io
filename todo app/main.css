@@ -69,3 +69,8 @@ body {
       float: right;    
     
     }
+
+    .date {
+      font-size: 9px;
+      float: left;
+    }
