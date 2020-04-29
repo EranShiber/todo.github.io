@@ -22,7 +22,7 @@
 const input = document.querySelector('input');
 const form = document.querySelector('form');
 const ul = document.querySelector('ul');
-
+const selector = document.querySelector('select')
 
 const todos = [];
 
@@ -37,7 +37,6 @@ form.addEventListener('submit', formSubmit);
 
 function formSubmit(x) {
     x.preventDefault()
-
     if(input.value === "") {
 
     } else {
@@ -65,19 +64,14 @@ function formSubmit(x) {
             dateSent.classList = "date"
             completedBtn.classList = "completed"
             completedBtn.innerHTML = "Completed"
-        
-        
-            li.innerHTML = todos[todos.length - 1].todo
+            li.innerHTML = ` <p class="userText"> ${todos[todos.length - 1].todo} </p>`
             li.id = todos.length
             li.appendChild(dateSent)
             li.appendChild(delBtn)
             li.appendChild(completedBtn)
             ul.appendChild(li)
-        
 
-        localStorage.setItem("todo" , todos[todos.length - 1].todo)
-        localStorage.setItem("completed" , todos[todos.length - 1].completed)
-        input.value = '';
+              input.value = '';
 
     }
 
@@ -97,15 +91,17 @@ ul.addEventListener("click", (e) => {
 // Marking as completed:
 
 ul.addEventListener("click", (e) => {
-
     if (e.target.classList.value === "completed"){
 
         if (e.target.innerHTML === "Completed"){
             e.target.parentNode.style = "text-decoration: line-through"
+            e.target.parentNode.style = "opacity: 0.4"
+            e.target.parentNode.classList += " complete"
             e.target.innerHTML = "Undo"   
         } else if (e.target.innerHTML !== "completed") {
             e.target.parentNode.style = "text-decoration: none"
             e.target.innerHTML = "Completed" 
+            e.target.parentNode.classList = "todo"
         }
 
     }
@@ -119,3 +115,40 @@ ul.addEventListener("click", (e) => {
 })
 
 
+// filtering todos
+
+selector.addEventListener("click", (x) => {
+    const tasks = ul.childNodes;
+    tasks.forEach(x => {
+
+        if(x.style){
+            switch(selector.value){
+                case "all":
+                    x.style.display = "flex";
+                    break;
+                    case "complete":
+                        if(x.classList.contains("complete")){
+                            
+                            x.style.display = "flex";
+                        } else {
+                            x.style.display = "none";
+                        }
+                        break;
+                        case "uncomplete":
+                            if(x.classList.contains("complete")){
+                            
+                                x.style.display = "none";
+                            } else {
+                                x.style.display = "flex";
+                            }   
+
+            }
+
+        } else {
+
+        }
+    })
+
+ 
+
+})
