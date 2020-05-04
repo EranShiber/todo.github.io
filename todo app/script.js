@@ -51,9 +51,8 @@ function formSubmit(x) {
         let completedBtn = document.createElement('button');
         let dateSent = document.createElement("p");
         let current_datetime = new Date()
-        let formatted_date = current_datetime.getFullYear() + "/" + (current_datetime.getMonth() + 1) + "/" + current_datetime.getDate();
+        let formatted_date = current_datetime.toLocaleString()
         dateSent.innerText = formatted_date
-        dateSent.innerHTML = formatted_date
         li.classList = "todo"
         delBtn.innerHTML = "Delete"
         delBtn.classList = "del"
