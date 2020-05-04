@@ -50,7 +50,10 @@ function formSubmit(x) {
         let delBtn = document.createElement('button')
         let completedBtn = document.createElement('button');
         let dateSent = document.createElement("p");
-        dateSent.innerHTML = new Date()
+        let current_datetime = new Date()
+        let formatted_date = current_datetime.getFullYear() + "/" + (current_datetime.getMonth() + 1) + "/" + current_datetime.getDate();
+        dateSent.innerText = formatted_date
+        dateSent.innerHTML = formatted_date
         li.classList = "todo"
         delBtn.innerHTML = "Delete"
         delBtn.classList = "del"
@@ -175,7 +178,9 @@ function setStorageUi() {
         let delBtn = document.createElement('button')
         let completedBtn = document.createElement('button');
         let dateSent = document.createElement("p");
-        dateSent.innerHTML = new Date()
+        let current_datetime = new Date()
+        let formatted_date = current_datetime.getFullYear() + "/" + (current_datetime.getMonth() + 1) + "/" + current_datetime.getDate();
+        dateSent.innerText = formatted_date
         li.classList = "todo"
         delBtn.innerHTML = "Delete"
         delBtn.classList = "del"
