@@ -12,9 +12,18 @@
     transition: 1s all ease;
   }
 
+
+
+  
   .main-container {
       text-align: center;
+      position: relative;
   }
+
+  .login-container {
+
+  }
+
 
   h1 {
       font-weight: 900;
@@ -208,9 +217,6 @@
   .sun {
     background: white;
   }
-
-
-  
 
   .todo button {
     border: none;
