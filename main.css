@@ -9,19 +9,66 @@
   body {
     background: linear-gradient(to right,#2fa08d, #b6f3c3);
     min-height: 80vh;
-    transition: 1s all ease;
   }
 
+/* login styles */
+  .login-container {
+    height: 50vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
 
+  .login-container input {
+    margin: 10px;
+    width: 20rem;
+    display: block;
+    text-align: center;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    color: #222;
+    background: #fff;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    border-radius: 24px;
+    height: 44px;
+    outline: none;
+  }
+  .login-container button {
+    margin: 15px;
+    display: block;
+    font-size: 14px;
+    color: #222;
+    background: #fff;
+    border: 1px solid #dfe1e5;
+    text-align: center;
+    border-radius: 15px;
+    padding: 25px;
+    outline: none;
+  }
+
+.login-container p {
+  font-weight: 900;
+  font-size: 45px;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  color: #dfe1e5;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.login-container a {
+  font-weight: 900;
+  color: black;
+  text-decoration: none;
+}
 
   
   .main-container {
       text-align: center;
       position: relative;
-  }
-
-  .login-container {
-
   }
 
 
@@ -51,7 +98,7 @@
     margin: auto;
   }
 
-  .input {
+  .main-input {
     width: 100%;
     text-align: center;
     font-family: arial,sans-serif;
@@ -112,7 +159,7 @@
     }
 
 
-  .input:focus {
+  .main-input:focus {
     border-bottom: 4px solid #b6f3c3;
     transition: 0.2s ease;
     border-top: 4px solid #b6f3c3;
@@ -294,9 +341,7 @@
         left: 0;
         margin-bottom: 3rem;
       }
-      .night-mode {
-        
-      }
+
     }
 
 

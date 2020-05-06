@@ -11,16 +11,18 @@
 </head>
 
 <body>
+
+    <div class="login-container">
+        <form class="">
+            <p>Login</p>
+            <a href="#">Register for new features</a>
+            <input class="email-input" type="email" placeholder="example@gmail.com">
+            <input class="password-input" type="password" placeholder="password">
+            <button class="fireBase-login"> Login </button>
+            <a class="passRest" href="#">forget your password?</a>
+    </div>
+
     <div class="main-container">
-        <div class="login-container">
-            <form>
-                <p>Login</p>
-                <a href="#">Register for new features</a>
-                <input type="email" placeholder="example@gmail.com">
-                <input type="password" placeholder="password">
-                <a href="#">forget your password</a>
-            </form>
-        </div>
         <div class="night-mode">
             <button><i class="fa fa-moon-o"></i></button>
         </div>
@@ -28,7 +30,7 @@
         <div class="main-box">
             <form>
                 <div class="input-container">
-                    <input class="input" placeholder="How about beign productive today?">
+                    <input class="main-input" placeholder="How about beign productive today?">
                     <input type="submit" value="+" class="btn">
                 </div>
                 <select class="select">
@@ -51,8 +53,6 @@
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
     <script>
-        // Your web app's Firebase configuration
-
         var firebaseConfig = {
             apiKey: "AIzaSyB0phpD4swfbawyL5wM-IK37WC57p3vt2k",
             authDomain: "todo-79aca.firebaseapp.com",

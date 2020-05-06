@@ -2,18 +2,31 @@
 // Local storage ( bugged where you can only save one todo at time)
 
 window.addEventListener('load', (e) => {
-    
     if (localStorage.getItem('todos' === null)) {
+        
     } else {
         setStorageUi()
     }
 })
+
+// firebase initation:
+const fireBaseLogin = document.querySelector('.fireBase-login');
+const passwordInput = document.querySelector('.password-input');
+const emailInput = document.querySelector('.email-input');
+const passRest = document.querySelector('.passRest');
+// regular initation:
 const nightBtn = document.querySelector('.night-mode')
-const input = document.querySelector('input');
+const mainInput = document.querySelector('.main-input');
 const form = document.querySelector('form');
 const ul = document.querySelector('ul');
 const selector = document.querySelector('select')
 const todos = [];
+
+// when submiting firebase form =>
+fireBaseLogin.addEventListener("click", () => {
+    
+
+})
 
 // When submiting =>
 
@@ -22,7 +35,7 @@ form.addEventListener('submit', formSubmit);
 function formSubmit(x) {
     x.preventDefault()
 
-    if (input.value === "") {
+    if (mainInput.value === "") {
     } else {
         const toggleBtn = document.createElement("button");
         toggleBtn.innerHTML = `<i class="fa fa-trash" aria-hidden="true"></i>`;
@@ -35,10 +48,10 @@ function formSubmit(x) {
 
 
         // Adding todo to the main array
-        saveAndCheckStorage(input.value)
+        saveAndCheckStorage(mainInput.value)
         todos.push({
             completed: false,
-            todo: input.value,
+            todo: mainInput.value,
             index: todos.length
         })
 
@@ -66,7 +79,7 @@ function formSubmit(x) {
         li.appendChild(completedBtn)
         ul.appendChild(li)
 
-        input.value = '';
+        mainInput.value = '';
     }
 }
 
